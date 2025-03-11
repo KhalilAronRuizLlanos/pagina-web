@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Responsivo</title>
+    <title>Rotar AI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
 </head>
@@ -123,7 +123,7 @@
         
     </div> 
 </div>
-<div class="container-fluid " id="sec_marcas">
+<div class="container-fluid " id="">
     <div class="m-2 p-3 animated-section-3" style="background-color: white; border: 1px solid white; border-radius: 20px;" >
         <div class="slider" style="display: flex; justify-content: space-around; align-items: center;">
             <img class="img-fluid" src="marcas/spotify.png" alt="">
@@ -139,7 +139,7 @@
 <div class="container-fluid">
     <div class="m-2 p-3" style="background-color: white; border: 1px solid white; border-radius: 20px;">
         <div class="row">
-            <div class="sec-2 col-xl-6 col-sm-12">
+            <div class="sec-2 col-xl-6 col-sm-12 seccion-2" id="sec_marcas"> 
                 <div class="caja-1 col-sm-12" style="height: 50%;">
                     <h1 class="texto-resaltado">Deliver es a high-quality <span>customer experience</span></h1>
                     <p>Embrace AI chatbot technology in a GPT-4-supported <br>
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <div class="col-xl-6">
-                <div class="row">
+                <div class="row seccion-2" id="sec_marcas">
                     <div class="h-100 col-xl-6 col-sm-12 p-2 rounded-5" style="background-color: #f5f5f5; height: 100%;">
                         <div class="d-flex flex-column" style="height: 60%;">
                             <div class="d-flex flex-column align-items-end m-1">
@@ -544,25 +544,34 @@
     });
 
     //chica Operadora
-    const sec_marcas = document.getElementById("sec_marcas");
-    const cargaSec_marcas = (entradas, observador)=>{
-        //  console.log(entradas)
-        entradas.forEach((entrada)=>{
-            if(entrada.isIntersecting){
-                console.log("la imagen esta dentro")
-            }
-            else{
-                console.log("esta afuera")
-            }
-        })
-    };
-    const observador = new IntersectionObserver(cargaSec_marcas , {
-        root:null,
-        rootMargin: "0px",
-        threshold: 1.0 
-        
+    document.addEventListener("DOMContentLoaded", () => {
+    const secciones = document.querySelectorAll("#sec_marcas"); // Selecciona todos los elementos con esos IDs
+
+    if (secciones.length > 0) { // Verifica si hay elementos antes de observar
+        const cargaSecciones = (entradas, observador) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    console.log(`${entrada.target.id} está dentro`);
+                    entrada.target.classList.add("visible");
+                } else {
+                    console.log(`${entrada.target.id} está afuera`);
+                }
+            });
+        };
+
+        const observador = new IntersectionObserver(cargaSecciones, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5
         });
-    observador.observe(sec_marcas); // Evita que se repita
+
+        secciones.forEach(sec => observador.observe(sec)); // Observa cada sección existente
+    } else {
+        console.error("No se encontraron elementos con los IDs sec_marcas o sec_nombres");
+    }
+});
+
+
 </script>
 </body>
 </html>

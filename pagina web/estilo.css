@@ -660,3 +660,29 @@ width: 60px;
   .animated-section-3{
     animation: fadeInTop 1s ease-out;
   }
+
+
+  /* Seccion-2 */
+ .seccion-2 {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 0.7s ease-in-out all;
+    will-change: opacity, transform; /* Indica al navegador que estos cambios ocurrirán */
+}
+
+  
+  .visible{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: .7s ease-in-out all;
+  }
+ .seccion-3 {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 0.7s ease-in-out all;
+    will-change: opacity, transform; /* Indica al navegador que estos cambios ocurrirán */
+}
+
+  
+
+
