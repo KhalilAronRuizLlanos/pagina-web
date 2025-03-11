@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Progresiva</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 2rem;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contenedor {
+            max-width: 80%;
+            text-align: center;
+            margin: 100vh 0; /* Espacio antes y después */
+        }
+
+        .palabra {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin: 5px;
+            display: inline-block;
+            visibility: hidden;
+        }
+
+        .palabra.mostrar {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .parrafo {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+            margin-top: 50px;
+        }
+
+        .parrafo.mostrar {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor" id="texto">
+        Bienvenido a mi página con animaciones que aparecen de forma progresiva. fgfff fff f
+    </div>
+
+    <!-- Nuevo div con párrafo animado -->
+    <div class="contenedor" id="parrafo">
+        <p class="parrafo">Este es un párrafo adicional que aparece con una animación.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contenedor = document.getElementById("texto");
+            const parrafo = document.getElementById("parrafo");
+
+            // Separa el texto en palabras automáticamente
+            const palabras = contenedor.innerText.split(" ");
+            contenedor.innerHTML = ""; // Limpia el contenido original
+
+            // Crea un span para cada palabra y la agrega al contenedor
+            palabras.forEach(palabra => {
+                let span = document.createElement("span");
+                span.classList.add("palabra");
+                span.textContent = palabra + " ";
+                contenedor.appendChild(span);
+            });
+
+            // Configura el observer para el contenedor de palabras
+            const observerTexto = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let palabras = contenedor.querySelectorAll(".palabra");
+                        palabras.forEach((palabra, index) => {
+                            setTimeout(() => {
+                                palabra.classList.add("mostrar");
+                            }, index * 200); // Retraso progresivo de cada palabra
+                        });
+
+                        observerTexto.unobserve(contenedor); // Evita que se repita
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observerTexto.observe(contenedor);
+
+            // Configura el observer para el párrafo
+            const observerParrafo = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const parrafoElemento = parrafo.querySelector(".parrafo");
+                        parrafoElemento.classList.add("mostrar");
+
+                        observerParrafo.unobserve(parrafo); // Evita que se repita
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observerParrafo.observe(parrafo);
+        });
+    </script>
+
+</body>
+</html>

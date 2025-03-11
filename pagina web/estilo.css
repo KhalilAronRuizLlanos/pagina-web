@@ -1,0 +1,630 @@
+
+/* tamaño texto resaltado */
+.texto-resaltado{
+  font-size: 60px;
+}
+.texto-resaltado>span{
+  background-color: #bbfbdc; border: 2px solid #bbfbdc; border-radius: 10px; padding: 2px;
+}
+/* Estilos del logo */
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+/* Botón personalizado */
+.mi-boton {
+  background-color: #0ef440;
+  padding: 6px 18px;
+  border-radius: 20px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Estilo de la imagen en el botón */
+.icono {
+  width: 16px;
+  height: 16px;
+}
+
+/* boton negro con logo */
+.boton-img{
+  padding-left: 10px;
+  width: 110px;
+  height: 60px; 
+  border: 1px solid black;
+  right: 200px;
+  top: 200px;
+  border-radius: 50px;
+  background-color: black;
+}
+.boton-img::before{
+  content: "";
+  position: absolute ;
+  background-color:transparent;
+  border: 1px solid black;
+  width: 120px;
+  height: 60px;
+  border-radius: 50px;
+}
+.boton-img::after{
+  content: "";
+  position: absolute ;
+  background-color:transparent;
+  border: 1px solid black;
+  width: 140px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+/* fin */
+
+/* Estilo de navegación */
+.navbar-nav a {
+  font-weight: bold;
+}
+
+/* Fondo con imagen */
+.fondo-blanco {
+  background-image: url('img/mole.png');
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 350px;
+}
+
+.chica-operadora {
+  background-image: url('img/mujer-operadora.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.hijo-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que ocupe el alto completo del contenedor */
+}
+/* bordes redondeados */
+.pre-btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  width: 250px; 
+  padding: 10px;
+  border-top-left-radius: 20px;
+}
+.pre-btn::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color:transparent;
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 6px 6px white;
+}
+.pre-btn::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  border-bottom-right-radius: 20px;
+  box-shadow: 6px 6px white;
+}
+/* fin */
+
+.boton-play {
+  display: flex;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0ef440;
+  color: black;
+  font-weight: bold;
+  border-radius: 20px;
+  
+}
+/* .boton-play::before{
+
+
+} */
+
+button img {
+  margin-left: 5px;
+  width: 16px;
+  height: 16px;
+}
+/* fin diseño de bordes */
+.hijo-1 > button{
+  border: 2px solid white;
+  position: relative;
+  padding: 10px;
+  top: 10px;
+  left: 10px;
+  margin: 10px;
+}
+.hijo-1 > button > img{
+  margin-right: 2px;
+}
+.hijo-1::before{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-bottom-left-radius: 15px;
+  
+}
+.hijo-1::after{
+  content: "";content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color:transparent;
+  position: absolute;
+  top: 0px;
+  right: 60px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px -15px white;
+
+}
+
+.disena{
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color:transparent;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px -15px white;
+
+}
+/* fin diseño de bordes */
+
+.two-box>div>div{
+  height: 200px; width: 610px; justify-content: center;
+}
+.estrella{
+  width: 40px;
+}
+
+
+/* slider */
+
+.slider{filter: grayscale(100%);
+}
+.slider img {
+  width: 100px;
+  height: auto;
+}
+
+/* fin */
+
+.sec-2 > .caja-2{
+  background-image: url('img/fondo_blanco.jpg');
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 280px;
+
+}
+.caja-2 {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.image-container {
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container img {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Posicionamiento específico */
+.img-1 { top: 20px; left: 40px; width: 70px; }
+.img-2 { top: 50px; left: 190px; width: 85px; }
+.img-3 { top: 20px; left: 350px; width: 50px; }
+.img-4 { top: 50px; left: 470px; width: 60px; }
+
+/* Efecto al pasar el cursor */
+.image-container img:hover {
+  transform: scale(1.2);
+}
+
+.iconos-m {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+.icono-red {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(128, 128, 128, 0.3); /* Fondo gris traslúcido */
+  border-radius: 50%; /* Bordes redondeados */
+  padding: 5px;
+}
+
+.icono-red:nth-child(1) { top: 0; left: -40%; }
+.icono-red:nth-child(2) { top: 0; right: -40%; }
+.icono-red:nth-child(3) { top: 25%; left: 50%; transform: translate(-50%, -50%); }
+.icono-red:nth-child(4) { bottom: 10%; left: -20%; }
+.icono-red:nth-child(5) { bottom: 10%; right: -20%; }
+
+
+
+
+/* circulo con porcentaje */
+
+.progress-container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ojo y flecha */
+.ojo-flecha >img{
+width: 60px;
+
+}
+.ojo-flecha {
+  border: 1px solid black;
+  position: absolute;
+  bottom: 12%; /* Utiliza porcentaje para que se adapte al tamaño de la pantalla */
+  left: 75%;  /* Usa porcentaje para centrarlo horizontalmente */
+  display: flex;
+  align-items: center; /* Centra los elementos */
+  gap: 10px; /* Espacio entre imágenes */
+  padding: 0px 10px;
+}
+
+.ojo-flecha::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 62px;
+  border: 1px solid black;
+  display: block;
+  border-radius: 40px;
+}
+.ojo-flecha::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  border: 1px solid black;
+  display: block;
+  border-radius: 40px;
+}
+
+/* fondo Azul */
+
+.fondo-azul {
+  background-image: url('img/fondo-azul.jpg'); /* Reemplaza con la URL de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Para que el texto sea visible */
+  border-radius: 20px;
+}
+
+.chat-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 600px;
+  height: 420px;
+}
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.chat-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.chat-message {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+}
+.chat-buttons .btn {
+  margin: 5px;
+  border-radius: 20px;
+}
+
+
+
+/* secccion 4 */
+
+    .highlight-text {
+      background-color: #a8f0d1;
+      border-radius: 0.25rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .category-badge {
+      border: 1px solid #ccc;
+      border-radius: 2rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .category-badge:hover {
+      background-color: #a8f0d1;
+      color: #000;
+    }
+
+    .card-custom {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .chat-bubble {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-bubble.green {
+      background-color: #a8f0d1;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .btn-custom {
+      background-color: #000;
+      color: #fff;
+      border-radius: 2rem;
+      padding: 0.5rem 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-custom:hover {
+      background-color: #333;
+    }
+
+    .btn-custom svg {
+      margin-left: 0.5rem;
+    }
+    /* seccion 5 */
+    .testimonial-container {
+      background-color: #f5f5f5;
+      border-radius: 20px;
+      padding: 2rem;
+  }
+  .testimonial-image {
+      border-radius: 20px;
+  }
+  .testimonial-card {
+      background-color: #00ff9d;
+      color: black;
+      border-radius: 15px;
+      padding: 1.5rem;
+  }
+  .client-testimonial {
+      font-size: 0.9rem;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+  }
+  .pagination-btn {
+      background-color: black;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.5rem;
+  }
+    /* seccion 6 */
+    .custom-section {
+      background-color: #00ff66;
+      color: #000;
+      padding: 50px;
+      border-radius: 20px;
+      position: relative;
+    }
+    .custom-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0, 255, 102, 0.2), transparent);
+      z-index: 1;
+    }
+    .custom-section h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      z-index: 2;
+      position: relative;
+    }
+    .custom-section p {
+      font-size: 1rem;
+      z-index: 2;
+      position: relative;
+    }
+    .btn-custom {
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 50px;
+    }
+    .btn-demo {
+      background-color: #000;
+      color: #fff;
+    }
+    .btn-demo:hover {
+      background-color: #333;
+    }
+    .btn-contact {
+      background-color: transparent;
+      border: 2px solid #000;
+      color: #000;
+    }
+    .btn-contact:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    /* footer */
+    
+    .footer {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .footer h5 {
+      font-weight: bold;
+    }
+
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-buttons a {
+      border: 1px solid #ffffff;
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .social-buttons a:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .footer-divider {
+      border-top: 1px solid #ffffff;
+      margin: 2rem 0;
+    }
+  
+
+    /* messi */
+    .messi{
+      position: relative;
+      
+    }
+    .conch{
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+    }
+ 
+
+
+    /* animacion */
+    @keyframes fadeInLeft {
+      from {
+          opacity: 0;
+          transform: translateX(-50px);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  /* Aplica animación al contenedor principal sin afectar otros */
+  .animated-section {
+      animation: fadeInLeft 1s ease-out;
+  }
+
+  /* Anima solo los elementos internos de esta sección */
+  .animated-section .fade-in-item {
+      opacity: 0;
+      animation: fadeInLeft 1s ease-out forwards;
+  }
+
+  /* Retrasos escalonados para cada elemento */
+  .animated-section .fade-in-item:nth-child(1) { animation-delay: 0.3s; }
+  .animated-section .fade-in-item:nth-child(2) { animation-delay: 0.5s; }
+  .animated-section .fade-in-item:nth-child(3) { animation-delay: 0.7s; }
+  .animated-section .fade-in-item:nth-child(4) { animation-delay: 0.9s; }
+
+
+  /* animacion 2 */
