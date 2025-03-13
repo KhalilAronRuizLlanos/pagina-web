@@ -1,4 +1,4 @@
-nstalación
+Instalación
 
 1. Incluir Bootstrap desde CDN (Opción rápida)
 
